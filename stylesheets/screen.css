@@ -1,4 +1,4 @@
-@import url(/fonts/fonts.css);
+@import url(fonts/fonts.css);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -503,7 +503,7 @@ dd, dt {
 }
 
 .s-dark {
-  background-image: url('/images/../images/stars/dark.png?1362401456');
+  background-image: url('../images/stars/dark.png?1362401456');
   height: 20px;
   width: 20px;
   float: left;
@@ -515,12 +515,12 @@ dd, dt {
     -moz-background-size: 20px auto;
     -o-background-size: 20px auto;
     background-size: 20px auto;
-    background-image: url('/images/../images/stars/dark@2x.png?1362401450');
+    background-image: url('../images/stars/dark@2x.png?1362401450');
   }
 }
 
 .s-light {
-  background-image: url('/images/../images/stars/light.png?1362401443');
+  background-image: url('../images/stars/light.png?1362401443');
   height: 20px;
   width: 20px;
   float: left;
@@ -532,7 +532,7 @@ dd, dt {
     -moz-background-size: 20px auto;
     -o-background-size: 20px auto;
     background-size: 20px auto;
-    background-image: url('/images/../images/stars/light@2x.png?1362401436');
+    background-image: url('../images/stars/light@2x.png?1362401436');
   }
 }
 

@@ -287,7 +287,7 @@ dd, dt {
 
 // STARS
 .s-dark {
-	@include background-image-retina('../images/stars/dark.png');
+	@include background-image-retina('stars/dark.png');
 	height: 20px;
 	width: 20px;
 	float: left;
@@ -295,7 +295,7 @@ dd, dt {
 }
 
 .s-light {
-	@include background-image-retina('../images/stars/light.png');
+	@include background-image-retina('stars/light.png');
 	height: 20px;
 	width: 20px;
 	float: left;

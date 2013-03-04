@@ -1,0 +1,307 @@
+@import "compass/reset";
+@import "compass/typography/vertical_rhythm";
+@import "compass/css3/box-shadow";
+@import "compass/utilities/general/clearfix";
+@import "susy";
+@import "retina";
+
+// GENERAL CONFIGURATION
+@import "configuration";
+@import "/fonts/fonts.css";
+
+// LAYOUT
+@include establish-baseline;
+
+#container {
+	@include container;
+	@include susy-grid-background;
+	@include debug-vertical-alignment;
+	@include margin-leader(1);
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+section:before,
+section:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+section:after {
+    clear: both;
+}
+
+header {
+	h1 {
+		color: rgb(109, 109, 109);
+
+		@include span-columns(8 omega);
+		@include adjust-font-size-to(30px); @include rhythm(1, 0, 1, 0, 30px);
+		@include at-breakpoint($tablet) { @include adjust-font-size-to(35px); @include rhythm(1, 0, 1, 0, 35px); }
+		@include at-breakpoint($computer) { @include adjust-font-size-to(40px); @include rhythm(1, 0, 1, 0, 40px);	}
+
+		small {
+			color: rgb(39, 39, 39);
+			@include adjust-font-size-to(8px);
+			display: block;
+			float: none;
+			text-align: left;
+			@include span-columns(8 omega);
+
+			@include at-breakpoint($tablet) {
+				text-align: right;
+				@include span-columns(4 omega, 10);
+				@include adjust-font-size-to(10px);
+			}
+
+			@include at-breakpoint($computer) {
+				@include span-columns(4 omega, 12);
+				@include adjust-font-size-to(12px);
+			}
+		}
+	}
+}
+
+section#personalia {
+	@include margin-trailer(1);
+}
+
+// TYPOGRAPHY
+h1 {
+	font-family: 'allerbold', serif;
+	@include adjust-font-size-to(20px);
+	@include rhythm(0, 0, 0.5, 0, 20px);
+
+	color: rgb(29, 58, 104);
+
+	@include at-breakpoint($tablet) { @include adjust-font-size-to(25px); @include rhythm(0, 0, 0.5, 0, 25px); }
+	@include at-breakpoint($computer) { @include adjust-font-size-to(30px); @include rhythm(0, 0, 0.5, 0, 30px); }
+
+}
+
+h2 {
+	font-family: 'allerbold', serif;
+	@include adjust-font-size-to(18px);
+	@include rhythm(0, 0, 0.3, 0, 18px);
+
+	color: #404040;
+
+	@include at-breakpoint($tablet) { @include adjust-font-size-to(18px); @include rhythm(0, 0, 0.3, 0, 18px); }
+	@include at-breakpoint($computer) { @include adjust-font-size-to(20px); @include rhythm(0, 0, 0.3, 0, 20px); }
+}
+
+@mixin font-styling {
+	font-family: 'aller_lightregular', sans-serif;
+	@include adjust-font-size-to(16px);
+}
+
+em {
+	font-family: 'aller_lightitalic', sans-serif;
+}
+
+small {
+	@include adjust-font-size-to(14px);
+}
+
+strong {
+	font-family: 'allerregular', sans-serif;
+}
+
+p {
+	@include font-styling;
+	@include rhythm(0, 0, 1, 0, 16px);
+}
+
+dt, dd {
+	@include font-styling;
+	@include rhythm(0, 0.15, 0, 0.15, 16px);
+}
+
+ul {
+	@include rhythm(0, 0, 1, 0, 16px);
+	margin-left: 1.5em;
+
+	li {
+		@include font-styling;
+		@include rhythm(0, 0, 0, 0, 16px);
+		list-style-type: disc;
+	}
+}
+
+#personalia {
+
+	dt {
+		color: rgb(109, 109, 109);
+
+		@include span-columns(8 omega, 8);
+
+		@include at-breakpoint($tablet) {
+			@include span-columns(5, 10);
+		}
+
+		@include at-breakpoint($tablet) {
+			@include span-columns(6, 12);
+		}
+	}
+
+	dd {
+		color: rgb(49, 49, 49);
+
+		@include span-columns(8 omega, 8);
+
+		@include at-breakpoint($tablet) {
+			@include span-columns(5 omega, 10);
+		}
+
+		@include at-breakpoint($computer) {
+			@include span-columns(6 omega, 12);
+		}
+	}
+}
+
+#skills {
+	@include margin-trailer(1);
+
+	dt {
+		color: rgb(109, 109, 109);
+
+		@include span-columns(8, 8);
+
+		// @include at-breakpoint($tablet) {
+			// @include span-columns(5, 10);
+		// }
+
+		@include at-breakpoint($tablet) {
+			@include span-columns(2, 10);
+		}
+
+		@include at-breakpoint($computer) {
+			@include span-columns(3, 12);
+		}
+
+		// @include at-breakpoint($)
+	}
+
+	dd.empty, dt.empty {
+		display: none;
+
+		@include at-breakpoint($tablet) {
+			display: inherit;
+		}
+	}
+
+	dd {
+		color: rgb(49, 49, 49);
+
+		@include span-columns(8, 8);
+
+		// @include at-breakpoint($tablet) {
+			// @include span-columns(5, 10);
+		// }
+
+		@include at-breakpoint($tablet) {
+			@include prefix(1);
+			@include span-columns(2, 10);
+
+			&:last-child {
+				@include span-columns(2 omega, 10);
+			}
+		}
+
+		@include at-breakpoint ($computer) {
+			@include prefix(0);
+			@include span-columns(3, 12);
+
+			&:last-child {
+				@include span-columns(3 omega, 12);
+			}
+		}
+	}
+}
+
+dt {
+	font-family: 'allerbold', serif;
+
+	@include at-breakpoint($tablet) {
+		font-family: 'aller_lightregular', sans-serif;
+	}
+}
+
+dd, dt {
+	border-color: rgb(128, 128, 128);
+}
+
+@include at-breakpoint($tablet) {
+	dl.first {
+		@include apply-side-rhythm-border(top, 1px, 0, 16px, solid);
+	}
+
+	dl {
+		@include apply-side-rhythm-border(bottom, 1px, 1.3, 16px, solid);
+		border-color: rgb(128, 128, 128);
+	}
+
+	dd, dt {
+		@include apply-side-rhythm-border(bottom, 0px, 0, 16px, none);
+	}
+}
+
+.has_years {
+	h2 {
+		@include span-columns(8 omega, 8);
+
+		@include at-breakpoint($tablet) {
+			@include span-columns(8, 10);
+		}
+
+		@include at-breakpoint($computer) {
+			@include span-columns(10, 12);
+		}
+	}
+
+	h3 {
+		@include span-columns(8 omega, 8);
+		font-family: 'allerbold', serif;
+		color: #404040;
+
+		@include at-breakpoint($tablet) {
+			@include span-columns(2 omega, 10);
+			@include adjust-font-size-to(18px);
+			@include rhythm(0, 0, 0.3, 0, 18px);
+		}
+
+		@include at-breakpoint($computer) {
+			@include span-columns(2 omega, 12);
+			@include adjust-font-size-to(20px);
+			@include rhythm(0, 0, 0.3, 0, 20px);
+		}
+	}
+}
+
+// STARS
+.s-dark {
+	@include background-image-retina('../images/stars/dark.png');
+	height: 20px;
+	width: 20px;
+	float: left;
+	margin-left: 1px;
+}
+
+.s-light {
+	@include background-image-retina('../images/stars/light.png');
+	height: 20px;
+	width: 20px;
+	float: left;
+	margin-left: 1px;
+}
+
+// RESPONSIVE STYLES
+@import "tablet";
+@import "computer";

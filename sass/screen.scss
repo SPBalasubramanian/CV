@@ -7,7 +7,7 @@
 
 // GENERAL CONFIGURATION
 @import "configuration";
-@import "fonts/fonts.css";
+@import "../fonts/fonts.css";
 
 // LAYOUT
 @include establish-baseline;

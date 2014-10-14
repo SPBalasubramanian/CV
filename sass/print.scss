@@ -1,5 +1,22 @@
 @import "screen.scss";
 
+// GRID
+$total-columns: 8;
+$column-width: 12%;
+$gutter-width: 0.5%;
+$grid-padding: $gutter-width;
+$show-grid-backgrounds: false;
+
+// LAYOUT
+@include establish-baseline;
+
+#container {
+    @include container;
+    @include susy-grid-background;
+    @include debug-vertical-alignment;
+    @include margin-leader(1);
+}
+
 .hide-print {
     display: none !important;
 }

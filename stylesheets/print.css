@@ -578,6 +578,35 @@ dd, dt {
     clear: both;
   }
 }
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+#container {
+  *zoom: 1;
+  max-width: 99.5%;
+  _width: 99.5%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  margin-left: auto;
+  margin-right: auto;
+  -moz-background-origin: content;
+  -o-background-origin: content-box;
+  -webkit-background-origin: content;
+  background-origin: content-box;
+  -moz-background-clip: content;
+  -o-background-clip: content-box;
+  -webkit-background-clip: content;
+  background-clip: content-box;
+  margin-top: 1.5em;
+}
+#container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .hide-print {
   display: none !important;
 }

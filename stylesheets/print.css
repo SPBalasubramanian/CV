@@ -1,0 +1,612 @@
+@import url(../fonts/fonts.css);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*
+ * Retina helper mixins for Compass
+ * http://www.joelambert.co.uk
+ *
+ * Copyright 2012, Joe Lambert.
+ * Free to use under the MIT license.
+ * http://joelambert.mit-license.org/
+ */
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+#container {
+  *zoom: 1;
+  max-width: 39em;
+  _width: 39em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  -moz-background-origin: content;
+  -o-background-origin: content-box;
+  -webkit-background-origin: content;
+  background-origin: content-box;
+  -moz-background-clip: content;
+  -o-background-clip: content-box;
+  -webkit-background-clip: content;
+  background-clip: content-box;
+  margin-top: 1.5em;
+}
+#container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+section:before,
+section:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+section:after {
+  clear: both;
+}
+
+header h1 {
+  color: #6d6d6d;
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+  font-size: 1.875em;
+  line-height: 1.6em;
+  margin-top: 0.8em;
+  padding-top: 0em;
+  padding-bottom: 0.8em;
+  margin-bottom: 0em;
+}
+@media (min-width: 49em) {
+  header h1 {
+    font-size: 2.1875em;
+    line-height: 1.37143em;
+    margin-top: 0.68571em;
+    padding-top: 0em;
+    padding-bottom: 0.68571em;
+    margin-bottom: 0em;
+  }
+}
+@media (min-width: 59em) {
+  header h1 {
+    font-size: 2.5em;
+    line-height: 1.2em;
+    margin-top: 0.6em;
+    padding-top: 0em;
+    padding-bottom: 0.6em;
+    margin-bottom: 0em;
+  }
+}
+header h1 small {
+  color: #272727;
+  font-size: 0.5em;
+  line-height: 3em;
+  display: block;
+  float: none;
+  text-align: left;
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+@media (min-width: 49em) {
+  header h1 small {
+    text-align: right;
+    width: 38.77551%;
+    float: right;
+    margin-right: 0;
+    font-size: 0.625em;
+    line-height: 2.4em;
+  }
+}
+@media (min-width: 59em) {
+  header h1 small {
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+    font-size: 0.75em;
+    line-height: 2em;
+  }
+}
+
+section#personalia {
+  margin-bottom: 1.5em;
+}
+
+h1 {
+  font-family: 'allerbold', serif;
+  font-size: 1.25em;
+  line-height: 1.2em;
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0.6em;
+  margin-bottom: 0em;
+  color: #1d3a68;
+}
+@media (min-width: 49em) {
+  h1 {
+    font-size: 1.5625em;
+    line-height: 1.92em;
+    margin-top: 0em;
+    padding-top: 0em;
+    padding-bottom: 0.48em;
+    margin-bottom: 0em;
+  }
+}
+@media (min-width: 59em) {
+  h1 {
+    font-size: 1.875em;
+    line-height: 1.6em;
+    margin-top: 0em;
+    padding-top: 0em;
+    padding-bottom: 0.4em;
+    margin-bottom: 0em;
+  }
+}
+
+h2 {
+  font-family: 'allerbold', serif;
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0.4em;
+  margin-bottom: 0em;
+  color: #404040;
+}
+@media (min-width: 49em) {
+  h2 {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    margin-top: 0em;
+    padding-top: 0em;
+    padding-bottom: 0.4em;
+    margin-bottom: 0em;
+  }
+}
+@media (min-width: 59em) {
+  h2 {
+    font-size: 1.25em;
+    line-height: 1.2em;
+    margin-top: 0em;
+    padding-top: 0em;
+    padding-bottom: 0.36em;
+    margin-bottom: 0em;
+  }
+}
+
+em {
+  font-family: 'aller_lightitalic', sans-serif;
+}
+
+small {
+  font-size: 0.875em;
+  line-height: 1.71429em;
+}
+
+strong {
+  font-family: 'allerregular', sans-serif;
+}
+
+p {
+  font-family: 'aller_lightregular', sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 1.5em;
+  margin-bottom: 0em;
+}
+
+dt, dd {
+  font-family: 'aller_lightregular', sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 0em;
+  padding-top: 0.225em;
+  padding-bottom: 0em;
+  margin-bottom: 0.225em;
+}
+
+ul {
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 1.5em;
+  margin-bottom: 0em;
+  margin-left: 1.5em;
+}
+ul li {
+  font-family: 'aller_lightregular', sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0em;
+  list-style-type: disc;
+}
+
+#personalia dt {
+  color: #6d6d6d;
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+@media (min-width: 49em) {
+  #personalia dt {
+    width: 48.97959%;
+    float: left;
+    margin-right: 2.04082%;
+  }
+}
+@media (min-width: 49em) {
+  #personalia dt {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+#personalia dd {
+  color: #313131;
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+@media (min-width: 49em) {
+  #personalia dd {
+    width: 48.97959%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 59em) {
+  #personalia dd {
+    width: 49.15254%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+#skills {
+  margin-bottom: 1.5em;
+}
+#skills dt {
+  color: #6d6d6d;
+  width: 100%;
+  float: left;
+  margin-right: 2.5641%;
+  display: inline;
+}
+@media (min-width: 49em) {
+  #skills dt {
+    width: 18.36735%;
+    float: left;
+    margin-right: 2.04082%;
+  }
+}
+@media (min-width: 59em) {
+  #skills dt {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+#skills dd.empty, #skills dt.empty {
+  display: none;
+}
+@media (min-width: 49em) {
+  #skills dd.empty, #skills dt.empty {
+    display: inherit;
+  }
+}
+#skills dd {
+  color: #313131;
+  width: 100%;
+  float: left;
+  margin-right: 2.5641%;
+  display: inline;
+}
+@media (min-width: 49em) {
+  #skills dd {
+    padding-left: 10.20408%;
+    width: 18.36735%;
+    float: left;
+    margin-right: 2.04082%;
+  }
+  #skills dd:last-child {
+    width: 18.36735%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 59em) {
+  #skills dd {
+    padding-left: 0%;
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  #skills dd:last-child {
+    width: 23.72881%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+dt {
+  font-family: 'allerbold', serif;
+}
+@media (min-width: 49em) {
+  dt {
+    font-family: 'aller_lightregular', sans-serif;
+  }
+}
+
+dd, dt {
+  border-color: gray;
+}
+
+@media (min-width: 49em) {
+  dl.first {
+    border-top-width: 0.0625em;
+    border-top-style: solid;
+    padding-top: -0.0625em;
+  }
+
+  dl {
+    border-bottom-width: 0.0625em;
+    border-bottom-style: solid;
+    padding-bottom: 1.8875em;
+    border-color: gray;
+  }
+
+  dd, dt {
+    border-bottom-width: 0em;
+    border-bottom-style: none;
+    padding-bottom: 0em;
+  }
+}
+.has_years h2 {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+@media (min-width: 49em) {
+  .has_years h2 {
+    width: 79.59184%;
+    float: left;
+    margin-right: 2.04082%;
+  }
+}
+@media (min-width: 59em) {
+  .has_years h2 {
+    width: 83.05085%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+.has_years h3 {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+  font-family: 'allerbold', serif;
+  color: #404040;
+}
+@media (min-width: 49em) {
+  .has_years h3 {
+    width: 18.36735%;
+    float: right;
+    margin-right: 0;
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    margin-top: 0em;
+    padding-top: 0em;
+    padding-bottom: 0.4em;
+    margin-bottom: 0em;
+  }
+}
+@media (min-width: 59em) {
+  .has_years h3 {
+    width: 15.25424%;
+    float: right;
+    margin-right: 0;
+    font-size: 1.25em;
+    line-height: 1.2em;
+    margin-top: 0em;
+    padding-top: 0em;
+    padding-bottom: 0.36em;
+    margin-bottom: 0em;
+  }
+}
+
+.s-dark {
+  background-image: url('../images/stars/dark.png?1362401456');
+  height: 20px;
+  width: 20px;
+  float: left;
+  margin-left: 1px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .s-dark {
+    -moz-background-size: 20px auto;
+    -o-background-size: 20px auto;
+    -webkit-background-size: 20px auto;
+    background-size: 20px auto;
+    background-image: url('../images/stars/dark@2x.png?1362401450');
+  }
+}
+
+.s-light {
+  background-image: url('../images/stars/light.png?1362401443');
+  height: 20px;
+  width: 20px;
+  float: left;
+  margin-left: 1px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .s-light {
+    -moz-background-size: 20px auto;
+    -o-background-size: 20px auto;
+    -webkit-background-size: 20px auto;
+    background-size: 20px auto;
+    background-image: url('../images/stars/light@2x.png?1362401436');
+  }
+}
+
+@media (min-width: 49em) {
+  #container {
+    *zoom: 1;
+    max-width: 49em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    -moz-background-origin: content;
+    -o-background-origin: content-box;
+    -webkit-background-origin: content;
+    background-origin: content-box;
+    -moz-background-clip: content;
+    -o-background-clip: content-box;
+    -webkit-background-clip: content;
+    background-clip: content-box;
+  }
+  #container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@media (min-width: 59em) {
+  #container {
+    *zoom: 1;
+    max-width: 59em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    -moz-background-origin: content;
+    -o-background-origin: content-box;
+    -webkit-background-origin: content;
+    background-origin: content-box;
+    -moz-background-clip: content;
+    -o-background-clip: content-box;
+    -webkit-background-clip: content;
+    background-clip: content-box;
+  }
+  #container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+#container {
+  *zoom: 1;
+  max-width: 99.5%;
+  _width: 99.5%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  margin-left: auto;
+  margin-right: auto;
+  -moz-background-origin: content;
+  -o-background-origin: content-box;
+  -webkit-background-origin: content;
+  background-origin: content-box;
+  -moz-background-clip: content;
+  -o-background-clip: content-box;
+  -webkit-background-clip: content;
+  background-clip: content-box;
+  margin-top: 1.5em;
+}
+#container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.hide-print {
+  display: none !important;
+}

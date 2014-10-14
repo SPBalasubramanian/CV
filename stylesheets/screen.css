@@ -51,7 +51,7 @@ a img {
   border: none;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
@@ -63,12 +63,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  * Free to use under the MIT license.
  * http://joelambert.mit-license.org/
  */
-* html {
-  font-size: 100%;
-}
-
 html {
-  font-size: 16px;
+  font-size: 100%;
   line-height: 1.5em;
 }
 
@@ -80,13 +76,13 @@ html {
   padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
-  -webkit-background-origin: content;
   -moz-background-origin: content;
-  -ms-background-origin: content-box;
   -o-background-origin: content-box;
+  -webkit-background-origin: content;
   background-origin: content-box;
-  -webkit-background-clip: content-box;
-  -moz-background-clip: content-box;
+  -moz-background-clip: content;
+  -o-background-clip: content-box;
+  -webkit-background-clip: content;
   background-clip: content-box;
   margin-top: 1.5em;
 }
@@ -122,7 +118,7 @@ header h1 {
   width: 100%;
   float: right;
   margin-right: 0;
-  #margin-left: -1em;
+  *margin-left: -1em;
   display: inline;
   font-size: 1.875em;
   line-height: 1.6em;
@@ -161,7 +157,7 @@ header h1 small {
   width: 100%;
   float: right;
   margin-right: 0;
-  #margin-left: -1em;
+  *margin-left: -1em;
   display: inline;
 }
 @media (min-width: 49em) {
@@ -189,7 +185,7 @@ section#personalia {
 }
 
 h1 {
-  font-family: "allerbold", serif;
+  font-family: 'allerbold', serif;
   font-size: 1.25em;
   line-height: 1.2em;
   margin-top: 0em;
@@ -220,7 +216,7 @@ h1 {
 }
 
 h2 {
-  font-family: "allerbold", serif;
+  font-family: 'allerbold', serif;
   font-size: 1.125em;
   line-height: 1.33333em;
   margin-top: 0em;
@@ -251,7 +247,7 @@ h2 {
 }
 
 em {
-  font-family: "aller_lightitalic", sans-serif;
+  font-family: 'aller_lightitalic', sans-serif;
 }
 
 small {
@@ -260,11 +256,11 @@ small {
 }
 
 strong {
-  font-family: "allerregular", sans-serif;
+  font-family: 'allerregular', sans-serif;
 }
 
 p {
-  font-family: "aller_lightregular", sans-serif;
+  font-family: 'aller_lightregular', sans-serif;
   font-size: 1em;
   line-height: 1.5em;
   margin-top: 0em;
@@ -274,7 +270,7 @@ p {
 }
 
 dt, dd {
-  font-family: "aller_lightregular", sans-serif;
+  font-family: 'aller_lightregular', sans-serif;
   font-size: 1em;
   line-height: 1.5em;
   margin-top: 0em;
@@ -291,7 +287,7 @@ ul {
   margin-left: 1.5em;
 }
 ul li {
-  font-family: "aller_lightregular", sans-serif;
+  font-family: 'aller_lightregular', sans-serif;
   font-size: 1em;
   line-height: 1.5em;
   margin-top: 0em;
@@ -306,7 +302,7 @@ ul li {
   width: 100%;
   float: right;
   margin-right: 0;
-  #margin-left: -1em;
+  *margin-left: -1em;
   display: inline;
 }
 @media (min-width: 49em) {
@@ -328,7 +324,7 @@ ul li {
   width: 100%;
   float: right;
   margin-right: 0;
-  #margin-left: -1em;
+  *margin-left: -1em;
   display: inline;
 }
 @media (min-width: 49em) {
@@ -413,11 +409,11 @@ ul li {
 }
 
 dt {
-  font-family: "allerbold", serif;
+  font-family: 'allerbold', serif;
 }
 @media (min-width: 49em) {
   dt {
-    font-family: "aller_lightregular", sans-serif;
+    font-family: 'aller_lightregular', sans-serif;
   }
 }
 
@@ -427,21 +423,21 @@ dd, dt {
 
 @media (min-width: 49em) {
   dl.first {
-    border-top-style: solid;
     border-top-width: 0.0625em;
+    border-top-style: solid;
     padding-top: -0.0625em;
   }
 
   dl {
-    border-bottom-style: solid;
     border-bottom-width: 0.0625em;
+    border-bottom-style: solid;
     padding-bottom: 1.8875em;
     border-color: gray;
   }
 
   dd, dt {
-    border-bottom-style: none;
     border-bottom-width: 0em;
+    border-bottom-style: none;
     padding-bottom: 0em;
   }
 }
@@ -449,7 +445,7 @@ dd, dt {
   width: 100%;
   float: right;
   margin-right: 0;
-  #margin-left: -1em;
+  *margin-left: -1em;
   display: inline;
 }
 @media (min-width: 49em) {
@@ -470,9 +466,9 @@ dd, dt {
   width: 100%;
   float: right;
   margin-right: 0;
-  #margin-left: -1em;
+  *margin-left: -1em;
   display: inline;
-  font-family: "allerbold", serif;
+  font-family: 'allerbold', serif;
   color: #404040;
 }
 @media (min-width: 49em) {
@@ -511,9 +507,9 @@ dd, dt {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   .s-dark {
-    -webkit-background-size: 20px auto;
     -moz-background-size: 20px auto;
     -o-background-size: 20px auto;
+    -webkit-background-size: 20px auto;
     background-size: 20px auto;
     background-image: url('../images/stars/dark@2x.png?1362401450');
   }
@@ -528,9 +524,9 @@ dd, dt {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   .s-light {
-    -webkit-background-size: 20px auto;
     -moz-background-size: 20px auto;
     -o-background-size: 20px auto;
+    -webkit-background-size: 20px auto;
     background-size: 20px auto;
     background-image: url('../images/stars/light@2x.png?1362401436');
   }
@@ -538,18 +534,19 @@ dd, dt {
 
 @media (min-width: 49em) {
   #container {
+    *zoom: 1;
     max-width: 49em;
     padding-left: 1em;
     padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
-    -webkit-background-origin: content;
     -moz-background-origin: content;
-    -ms-background-origin: content-box;
     -o-background-origin: content-box;
+    -webkit-background-origin: content;
     background-origin: content-box;
-    -webkit-background-clip: content-box;
-    -moz-background-clip: content-box;
+    -moz-background-clip: content;
+    -o-background-clip: content-box;
+    -webkit-background-clip: content;
     background-clip: content-box;
   }
   #container:after {
@@ -560,18 +557,19 @@ dd, dt {
 }
 @media (min-width: 59em) {
   #container {
+    *zoom: 1;
     max-width: 59em;
     padding-left: 1em;
     padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
-    -webkit-background-origin: content;
     -moz-background-origin: content;
-    -ms-background-origin: content-box;
     -o-background-origin: content-box;
+    -webkit-background-origin: content;
     background-origin: content-box;
-    -webkit-background-clip: content-box;
-    -moz-background-clip: content-box;
+    -moz-background-clip: content;
+    -o-background-clip: content-box;
+    -webkit-background-clip: content;
     background-clip: content-box;
   }
   #container:after {
